@@ -17,11 +17,11 @@ class AuthorFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->firstName(),
-            'surname' => $this->faker->lastName(),
-            'birth_date' => $this->faker->date(),
-            'death_date' => $this->faker->date(),
-            'biography' => $this->faker->paragraph(),
+            'name' => fake()->firstName(),
+            'surname' => fake()->lastName(),
+            'birth_date' => fake()->date(),
+            'death_date' => fake()->date(),
+            'biography' => fake()->paragraph(),
         ];
     }
 }

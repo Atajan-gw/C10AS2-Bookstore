@@ -17,7 +17,7 @@ class YearFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->numberBetween(1900, 2026),
+            'name' => fake()->numberBetween(1990, 2026),
         ];
     }
 }

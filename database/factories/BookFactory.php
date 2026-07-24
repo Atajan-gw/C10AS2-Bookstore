@@ -23,14 +23,14 @@ class BookFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->sentence(3),
+            'name' => fake()->sentence(3),
             'category_id' => Category::factory(),
             'author_id' => Author::factory(),
             'publisher_id' => Publisher::factory(),
             'language_id' => Language::factory(),
             'year_id' => Year::factory(),
-            'page_number' => $this->faker->numberBetween(50, 1000),
-            'code' => $this->faker->unique()->regexify('[A-Z]{3}-[0-9]{3}-[A-Z]{2}'),
+            'page_number' => fake()->numberBetween(50, 1000),
+            'code' => fake()->unique()->regexify('[A-Z]{3}-[0-9]{3}-[A-Z]{2}'),
         ];
     }
 }
