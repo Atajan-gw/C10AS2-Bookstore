@@ -8,8 +8,8 @@
 
     <title>{{ $title ?? 'Library' }}</title>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/icons/bootstrap-icons.min.css') }}">
 </head>
 
 <body class="bg-light d-flex flex-column min-vh-100">
@@ -26,7 +26,7 @@
         </div>
     </footer>
 
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
 </body>
 
 </html>
