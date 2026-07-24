@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Category;
 
 class CategorySeeder extends Seeder
 {
@@ -12,6 +13,21 @@ class CategorySeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        $categories = [
+            'Science Fiction',
+            'Fantasy',
+            'Mystery',
+            'Romance',
+            'Thriller',
+            'Horror',
+            'Historical Fiction',
+            'Biography',
+            'Self-Help',
+            'Poetry'
+        ];
+
+        foreach ($categories as $category) {
+            \App\Models\Category::create(['name' => $category]);
+        }
     }
 }
