@@ -49,11 +49,11 @@
                 </div>
                 <div class="col">
                     <label for="search" class="form-label fw-bold">Search</label>
-                    <input type="text" name="search" class="form-control w-100" value="{{ request('search') }}" placeholder="Search:">
+                    <input type="text" name="search" id="search" class="form-control w-100" value="{{ request('search') }}" placeholder="Search:">
                 </div>
                 <div class="col d-flex align-items-end gap-2 mt-3">
                     <button type="submit" class="btn btn-primary w-100">Search</button>
-                    @if(request('category_id') || request('author_id') || request('publisher_id') || request('year_id'))
+                    @if(request('category_id') || request('author_id') || request('publisher_id') || request('year_id') || request('search'))
                     <a href="{{ route('books.index') }}" class="btn btn-outline-danger">Reset</a>
                     @endif
                 </div>
