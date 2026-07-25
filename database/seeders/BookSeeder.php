@@ -24,7 +24,7 @@ class BookSeeder extends Seeder
         $languages = Language::all();
         $years = Year::all();
 
-        for ($i = 0; $i < 100; $i++) {
+        for ($i = 0; $i < 1000; $i++) {
             Book::create([
                 'name' => fake()->sentence(3),
                 'category_id' => $categories->random()->id,
